@@ -1,0 +1,2924 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+            ul {
+              list-style-type: none;
+            }
+            .FullArt {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 70%;
+            }
+
+            .Emotes {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 50%;
+            }
+            body {
+              background-image: url("MyraOther/MyraTiling.png");
+              background-repeat: repeat-xy;
+            }
+            p {text-align: center;}
+            h1 {text-align: center;}
+            form {text-align: center;}
+            input {text-align: center;}
+        </style>
+    </head>
+    <body style="background-color:#604065;">
+
+        <h1 style="color:#a438b2;">Myra Art Archive</h1>
+
+<!---------------[List Length]---------------->
+<form>
+  <input type="button" id="listCount" disabled value="Number of items" style="color:#f5adff;"></input>
+</form>
+<!---------------[Filter Buttons]---------------->
+        <form>
+          <input type="button" id="searchFilter" onpointerup="updateSearchFilterAll()" value="All" style="color:#a438b2;"></input>
+          <input type="button" id="searchFilter" onpointerup="updateSearchFilterFavourites()" value="Pins" style="color:#a438b2;"></input>
+          <input type="button" id="searchFilter" onpointerup="updateSearchFilterEmote()" value="Emotes" style="color:#a438b2;"></input>
+          <input type="button" id="searchFilter" onpointerup="updateSearchFilterArt()" value="Full Art" style="color:#a438b2;"></input>
+          <input type="button" id="searchFilter" onpointerup="updateSearchFilterSketches()" value="Sketches" style="color:#a438b2;"></input>
+          <input type="button" id="searchFilter" onpointerup="updateSearchFilterMemes()" value="Memes" style="color:#a438b2;"></input>
+          <input type="button" id="searchFilter" onpointerup="updateSearchFilterArtfight2024()" value="Artfight 2024" style="color:#a438b2;"></input>
+          <p style="color:#bd4789;">v - Click to confirm filters - v</p>
+        </form>
+        <form><input type="text" id="searchFilterInput" disabled onpointerup="searchFilter()" placeholder="All"></input></form>
+<script>
+//---------------[Filter selection]----------------//
+  function updateSearchFilterAll() {
+    document.getElementById("searchFilterInput").value = ""
+    
+  }
+
+  function updateSearchFilterEmote() {
+    document.getElementById("searchFilterInput").value = "Emotes"
+    
+  }
+
+  function updateSearchFilterArt() {
+    document.getElementById("searchFilterInput").value = "Full Art"
+    
+  }
+
+  function updateSearchFilterFavourites() {
+    document.getElementById("searchFilterInput").value = "Pins"
+    
+  }
+
+function updateSearchFilterSketches() {
+  document.getElementById("searchFilterInput").value = "Sketches"
+  
+}
+
+function updateSearchFilterMemes() {
+  document.getElementById("searchFilterInput").value = "Memes"
+  
+}
+
+function updateSearchFilterArtfight2024() {
+  document.getElementById("searchFilterInput").value = "Artfight 2024"
+  
+}
+
+  function searchFilter() {
+      var input, filter, ul, li, a, i, txtValue, itemCount;
+      input = document.getElementById("searchFilterInput");
+      filter = input.value.toUpperCase();
+      itemCount = 0
+      ul = document.getElementById("artList");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+              itemCount++;
+              document.getElementById("listCount").value = "Number of items: "+itemCount;
+          } else {
+              li[i].style.display = "none";
+          }
+      }
+  }
+</script>
+<!---------------[Element List]---------------->
+
+<ul id="artList">
+
+<!------------------------------->
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">by Hoshi_Star</p>
+
+    <img src="MyraFullArt/OriginalMyra.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 30APR2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by</p>
+
+    <img src="MyraFullArt/MyraSpectre.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 16SEP2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Robert</p>
+
+    <img src="MyraSketches/RobertDoodle2.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 2OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Robert</p>
+
+    <img src="MyraSketches/RobertDoodle3.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 3OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Robert</p>
+
+    <img src="MyraSketches/RobertDoodle3.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 5OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Robert</p>
+
+    <img src="MyraSketches/RobertDoodle1.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 6OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Atom</p>
+
+    <img src="MyraFullArt/AtomnMyra.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 6OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Robert</p>
+
+    <img src="MyraSketches/RobertOriAnniversary.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 7OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Ley</p>
+
+    <img src="MyraFullArt/MyraLey1.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 7OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Myra, Queen of Plushies - by Robert</p>
+
+    <img src="MyraSketches/MyraQueenOfPlushies.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 11OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Robert</p>
+
+    <img src="MyraSketches/MyraRobertConcert.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 16OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Atom</p>
+
+    <img src="MyraFullArt/Survival.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 21OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraSketches/MyraZariDoodle8.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 26OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Robert</p>
+
+    <img src="MyraSketches/RobertMyra.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 28OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraSketches/MyraZariDoodle7.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 30OCT2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Furryee</p>
+
+    <img src="MyraSketches/MyraFurryeeDoodle.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded INSERT_DATE_HERE</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by AquaDoesStuff</p>
+
+    <img src="MyraSketches/FluffyMyra.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded INSERT_DATE_HERE</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraFullArt/MyraPortrait.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded INSERT_DATE_HERE</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraSketches/MyraPlushSketch.jpg" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded INSERT_DATE_HERE</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraSketches/MyraZariDoodle5.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded INSERT_DATE_HERE</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraSketches/MyraZariDoodle4.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded INSERT_DATE_HERE</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">Myra Blub - by Doger</p>
+
+    <img src="MyraMemes/MyraBlub.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded NOV2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Atom</p>
+
+    <img src="MyraFullArt/AtomHugMyra.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 19NOV2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">Mill Myra Hug - by Kashi</p>
+
+    <img src="MyraFullArt/MyraMillHug.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 24NOV2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraFullArt/MyraGoddess.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 1DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Wolu</p>
+
+    <img src="MyraSketches/WoluSketch1.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 2DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Plush Hug Template - by Maori</p>
+
+    <img src="MyraFullArt/MyraPlushieHug.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 2DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">Santara - by Robert</p>
+
+    <img src="MyraMemes/Christmasra.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 3DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">by Lupo</p>
+
+    <img src="MyraFullArt/MyraLupo.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 4DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraGrab - by Corvis</p>
+
+    <img src="MyraEmotes/MyraGrabbed.webp" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 4DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraOfJoy - by Zari</p>
+
+    <img src="MyraEmotes/MyraOfJoyZari.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 4DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraJoy - by Zari</p>
+
+    <img src="MyraEmotes/MyraJoy.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 4DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraDevious - by Zari</p>
+
+    <img src="MyraEmotes/MyraDevious.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 4DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraCheese - by Zari</p>
+
+    <img src="MyraEmotes/MyraCheese.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 4DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSquee - by Zari</p>
+
+    <img src="MyraEmotes/MyraSquee.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 4DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraPansy - by Zari</p>
+
+    <img src="MyraEmotes/MyraPansy.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 4DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraBlep - by Zari</p>
+
+    <img src="MyraEmotes/MyraBlep.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 4DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraLaugh - by Zari</p>
+
+    <img src="MyraEmotes/MyraLaugh.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 4DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">by Pastel</p>
+
+    <img src="MyraFullArt/MyraPastelComm.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 4DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraSketches/MyraFlabbergasted.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 6DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Starr Myra Hug - by Zanexus</p>
+
+    <img src="MyraFullArt/MyraStarHug.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 6DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraWar - by Zari</p>
+
+    <img src="MyraEmotes/MyraWar.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 7DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraTbhLick - by Me</p>
+
+    <img src="MyraEmotes/MyraTBHLick.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 8DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraFullArt/MyraSmile.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 10DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">Mill Myra Finny Hug - by Lupo</p>
+
+    <img src="MyraFullArt/MillHugLupo.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 10DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraPlead - by Zari</p>
+
+    <img src="MyraEmotes/MyraPlead.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 13DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraNom - by Zari</p>
+
+    <img src="MyraEmotes/MyraNom.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 13DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraFullArt/StarrPiggybackMyra.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 13DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraSketches/MyraYikes.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 13DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraSketches/MyraZariDoodle10.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 14DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Ley</p>
+
+    <img src="MyraFullArt/MyraLey2.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 15DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraWorried - by Zari</p>
+
+    <img src="MyraEmotes/MyraWorried.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 16DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraExcite - by Zari</p>
+
+    <img src="MyraEmotes/MyraExcite.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 16DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSlam - by Zari</p>
+
+    <img src="MyraEmotes/MyraSlam.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 16DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraMillCheers - by Pansear</p>
+
+    <img src="MyraEmotes/MyraMillCheers.webp" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 18DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraDaniCuddle - by Pansear</p>
+
+    <img src="MyraEmotes/MyraDaniCuddle.gif" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 18DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraAnger.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 18DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraLick - by Pastel</p>
+
+    <img src="MyraEmotes/MyraLicker.gif" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 18DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraClose - by Pastel</p>
+
+    <img src="MyraEmotes/MyraClose.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 18DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraTeehee - by Pastel</p>
+
+    <img src="MyraEmotes/MyraTeehee.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 18DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra Shock - by Zanexus</p>
+
+    <img src="MyraSketches/MyraShocktransparent.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 19DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraAnime.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 19DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSmug - by Chibat</p>
+
+    <img src="MyraEmotes/MyraSmug.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 21DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">by Satori</p>
+
+    <img src="MyraFullArt/MyraSatori.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 21DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Myra Heart - by Sonmap</p>
+
+    <img src="MyraFullArt/MyraHeartSomi.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 23DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSip - by Zari</p>
+
+    <img src="MyraEmotes/MyraSip.webp" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 25DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraChug - by Zari</p>
+
+    <img src="MyraEmotes/MyraChug.webp" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 25DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraSketches/MyraCreature3.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 27DEC2023</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraStare - Furryee</p>
+
+    <img src="MyraEmotes/MyraStare.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 6JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraChiTail.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 6JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Katari</p>
+
+    <img src="MyraSketches/MyraKatariSketch.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 7JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraPeek - by Zanexus</p>
+
+    <img src="MyraEmotes/MyraPeek.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 8JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraEyebrow - by Furryee</p>
+
+    <img src="MyraEmotes/MyraEyebrow.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 9JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra Derp - by Zanexus</p>
+
+    <img src="MyraSketches/MyraDerp.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 9JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraFullArt/ChiMyraDoodle.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 14JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Generousra - by Furryee</p>
+
+    <img src="MyraFullArt/MyraHelpyee.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 14JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraDoodle11.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 16JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes Pins
+    </a>
+
+    <p style="color:#bd4789;">MyraBoss - by Pastel</p>
+
+    <img src="MyraEmotes/MyraBoss.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 17JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraCookie - by Furryee</p>
+
+    <img src="MyraEmotes/MyraCookie.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 17JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Wolu</p>
+
+    <img src="MyraSketches/WoluSketch2.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 17JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Wolu</p>
+
+    <img src="MyraSketches/WoluSketch3.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 17JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraOfCourse - by Zari</p>
+
+    <img src="MyraEmotes/MyraOfCourse.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 19FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraLoaf - by Zari</p>
+
+    <img src="MyraEmotes/MyraLoaf.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 20FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraFullArt/MyraZariDoodle1.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 20JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraDoodle4.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 22JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra Angy - by Zari</p>
+
+    <img src="MyraSketches/MyraAngy.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 23JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">gilld chese - by Zanexus</p>
+
+    <img src="MyraMemes/MyraGilldChese.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 25JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraDoodle5.webp" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 29JAN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraDoodle10.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 2FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraSit.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 3FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Back View - by Zari</p>
+
+    <img src="MyraFullArt/MyraBackView.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 4FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Neko</p>
+
+    <img src="MyraSketches/MyraNekoSketch.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 4FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraYay - by Zari</p>
+
+    <img src="MyraEmotes/MyraYay.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 6FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraEEE - by Zari</p>
+
+    <img src="MyraEmotes/MyraEEE.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 6FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches Pins
+    </a>
+
+    <p style="color:#bd4789;">Chef Myra - by Zari</p>
+
+    <img src="MyraSketches/MyraChef.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 6FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra Sob - by Zari</p>
+
+    <img src="MyraSketches/MyraSobTest.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 7FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraThink - by Zari</p>
+
+    <img src="MyraEmotes/MyraThink.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 7FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSob - by Zari</p>
+
+    <img src="MyraEmotes/MyraSob.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 7FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Spirit Souls - by Zari</p>
+
+    <img src="MyraSketches/MyraZariDoodle3.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 7FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraDoodle1.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 11FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes Pins
+    </a>
+
+    <p style="color:#bd4789;">MyraBleh - by Pastel</p>
+
+    <img src="MyraEmotes/MyraBleh.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 13FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraInLove - by Pastel</p>
+
+    <img src="MyraEmotes/MyraInLove.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 13FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraDog - by Furryee</p>
+
+    <img src="MyraEmotes/MyraDog.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 24FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraAwooga - by Furryee</p>
+
+    <img src="MyraEmotes/MyraAwooga.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 24FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraGlee - by Furryee</p>
+
+    <img src="MyraEmotes/MyraGlee.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 24FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraPray - by Furryee</p>
+
+    <img src="MyraEmotes/MyraPray.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 24FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">FullOfCookies - by Furryee</p>
+
+    <img src="MyraEmotes/FullOfCookies.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 24FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      INSERT_FILTER_TAGS_HERE
+    </a>
+
+    <p style="color:#bd4789;">by Pastel</p>
+
+    <img src="MyraSketches/MyraNoThoughts.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 24FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      INSERT_FILTER_TAGS_HERE
+    </a>
+
+    <p style="color:#bd4789;">Mistira - by Pastel</p>
+
+    <img src="MyraSketches/Mistira.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 25FEB2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraLook - by Pastel</p>
+
+    <img src="MyraEmotes/MyraLook.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 6MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSilly - by Pastel</p>
+
+    <img src="MyraEmotes/MyraSilly.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 6MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">Myra Magic - by Pastel</p>
+
+    <img src="MyraSketches/MyraMagic.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 6MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">Myra Mill Festival - by Mutso</p>
+
+    <img src="MyraFullArt/MyraMillFestival.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 7MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraHehe - by Pastel</p>
+
+    <img src="MyraEmotes/MyraHehe.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 8MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraPensive - by Pastel</p>
+
+    <img src="MyraEmotes/MyraPensive.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 9MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraWeep - by Pastel</p>
+
+    <img src="MyraEmotes/MyraWeep.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 9MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSnore - by Furryee</p>
+
+    <img src="MyraEmotes/MyraSnore.gif" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 10MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraCheesed - by Furryee</p>
+
+    <img src="MyraEmotes/MyraCheesed.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 10MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraImInLove - by Furryee</p>
+
+    <img src="MyraEmotes/MyraImInLove.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 10MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Myra Slug - by Zanexus</p>
+
+    <img src="MyraFullArt/SlugcatMyra.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 12MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraNoWay - by Zari</p>
+
+    <img src="MyraEmotes/MyraNoWay.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 16MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraDeathStare - by Zari</p>
+
+    <img src="MyraEmotes/MyraDeathStare.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 16MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraHorror - by Furryee</p>
+
+    <img src="MyraEmotes/MyraHorror.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 17MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSus - by Zari</p>
+
+    <img src="MyraEmotes/MyraSus.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 17MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraBetter - by Zari</p>
+
+    <img src="MyraEmotes/MyraBetter.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 17MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraWrite - by Zari</p>
+
+    <img src="MyraEmotes/MyraWrite.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 18MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraYawn - by Zari</p>
+
+    <img src="MyraEmotes/MyraYawn.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 18MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraWheeze - by Zari</p>
+
+    <img src="MyraEmotes/MyraWheeze.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 18MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">Chill Group - by Drayse</p>
+
+    <img src="MyraFullArt/ChillGroup.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 19MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraMemes/MyraCreature1.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 20MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraBlood - by Pastel</p>
+
+    <img src="MyraEmotes/MyraBlood.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 27MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraFlustered - by Pastel</p>
+
+    <img src="MyraEmotes/MyraFlustered.png" class="Emotes">
+
+    <img src="MyraEmotes/MyraShy.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 27MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSpit - by Pastel</p>
+
+    <img src="MyraEmotes/MyraSpit.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 27MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraShovel - by Pastel</p>
+
+    <img src="MyraEmotes/MyraShovel.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 29MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraDrool - by Pastel</p>
+
+    <img src="MyraEmotes/MyraDrool.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 29MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraHiya - by Pastel</p>
+
+    <img src="MyraEmotes/MyraHiya.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 29MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraDoodle6.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 31MAR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">Myra on a Chair - by Zari</p>
+
+    <img src="MyraMemes/MyraOnAChair.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 2APR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraHeart - by Zari</p>
+
+    <img src="MyraEmotes/MyraHeart.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 5APR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraFlushed - by Zari</p>
+
+    <img src="MyraEmotes/MyraFlushed.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 5APR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraDoodle7.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 6APR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">Myra Violence - by Zanexus</p>
+
+    <img src="MyraMemes/MyraViolence1.png" class="FullArt">
+
+    <img src="MyraMemes/MyraViolence2.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 11APR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraDoodle8.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 12APR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraFog - by Zari (Knife - by Furryee)</p>
+
+    <img src="MyraEmotes/MyraFog.png" class="Emotes">
+
+    <img src="MyraEmotes/MyraNoFog.png" class="Emotes">
+
+    <img src="MyraEmotes/MyraFogKnife.png" class="Emotes">
+
+    <img src="MyraEmotes/MyraKnife.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 14APR2024 (Knife - 29APR2024)</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraSketches/MyraDoodle3.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 19APR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraCreature - by Maori</p>
+
+    <img src="MyraEmotes/MyraCreature.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 21APR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">Myribidi Toilet - by Pastel</p>
+
+    <img src="MyraMemes/Skibidira.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 22APR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraCool - by Maori</p>
+
+    <img src="MyraEmotes/MyraCool.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 28APR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraFullArt/MyraDoodle9.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 29APR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra Violent Bite - by Zari</p>
+
+    <img src="MyraSketches/MyraBite.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 30APR2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra Loaf - by Furryee</p>
+
+    <img src="MyraMemes/MyraLoafSketch.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 2MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">Myra Bread - by Furryee</p>
+
+    <img src="MyraMemes/MyraBread.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 2MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">Myra Toast - by Furryee</p>
+
+    <img src="MyraMemes/MyraToast.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 2MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraHibernate - by Furryee</p>
+
+    <img src="MyraEmotes/MyraHibernate.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 6MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraOfJoy - by Pastel</p>
+
+    <img src="MyraEmotes/MyraOfJoy.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 7MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra Comfy Clothes - by Zari</p>
+
+    <img src="MyraSketches/MyraComfyClothes.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 9MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSippy - by Pastel</p>
+
+    <img src="MyraEmotes/MyraSippy.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 9MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSweat - by Furryee</p>
+
+    <img src="MyraEmotes/MyraSweat.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 11MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">Riverside - by Naro</p>
+
+    <img src="MyraFullArt/MyraNaroPainting.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 12MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraSketches/MyraZariDoodle6.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 12MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSobbing - by Furryee</p>
+
+    <img src="MyraEmotes/MyraSobbing.gif" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 13MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraSketches/MyraDoodle2.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 13MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">Raspberry Gummies - by Furryee (Emote by Pastel)</p>
+
+    <img src="MyraMemes/Gummyra.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 14MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">Myra Furryee Mill Banner - by Furryee</p>
+
+    <img src="MyraFullArt/FurrMillMyra.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 18MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zari</p>
+
+    <img src="MyraSketches/MyraZariDoodle2.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 23MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Maori Birthday - by Maori</p>
+
+    <img src="MyraFullArt/MaoriBirthday.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 23MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra Melon - by Zari</p>
+
+    <img src="MyraSketches/MyraMelonZari.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 23MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">by Nychta</p>
+
+    <img src="MyraMemes/MyraCreature2.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 26MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">It's Time to Drink Water - by Zari</p>
+
+    <img src="MyraMemes/MyraWater.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 26MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraTeef - by Zari</p>
+
+    <img src="MyraEmotes/MyraTeef.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 28MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Small Myra - by Zari</p>
+
+    <img src="MyraFullArt/MyraZariDoodle9.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 31MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra Hoodie - by Zanexus</p>
+
+    <img src="MyraSketches/MyraHoodie.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 31MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Myra Boss Coat - by Zari</p>
+
+    <img src="MyraFullArt/MyraCoat.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 31MAY2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraPoint - by Furryee</p>
+
+    <img src="MyraEmotes/MyraPoint.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 7JUN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">Myra Reference - by me</p>
+
+    <img src="MyraFullArt/MyraRef.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 09JUN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraTung - by Furryee</p>
+
+    <img src="MyraEmotes/MyraTung.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 12JUN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Kabriah Parks</p>
+
+    <img src="MyraFullArt/ArtTradeKabriah.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 12JUN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by SoupGamerBoy</p>
+
+    <img src="MyraFullArt/ArtTradeSoupGamer.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 12JUN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraFull - by Furryee</p>
+
+    <img src="MyraEmotes/MyraFull.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 13JUN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Drinkyra - by Zari</p>
+
+    <img src="MyraSketches/MyraDrinky.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 24JUN2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024 Pins
+    </a>
+
+    <p style="color:#bd4789;">Hello Myra - by Lupo</p>
+
+    <img src="MyraArtfight2024/ArtfightLupo.jpg" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 3JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Halfslug</p>
+
+    <img src="MyraArtfight2024/ArtfightHalfslug.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 3JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by AquaDoesStuff</p>
+
+    <img src="MyraArtfight2024/ArtfightAqua.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 3JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Lion</p>
+
+    <img src="MyraArtfight2024/ArtfightLion.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 3JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024 Pins
+    </a>
+
+    <p style="color:#bd4789;">Slugra - by Bewilderbark</p>
+
+    <img src="MyraArtfight2024/ArtfightBewilderbark.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 3JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Sonmap</p>
+
+    <img src="MyraArtfight2024/ArtfightSomi.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 3JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024 Pins
+    </a>
+
+    <p style="color:#bd4789;">Ribbonra - by Pastel</p>
+
+    <img src="MyraArtfight2024/ArtfightPastel.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 4JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraArtfight2024/ArtfightZanexus0.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 4JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraArtfight2024/ArtfightZanexus1.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 6JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by SoapSuds</p>
+
+    <img src="MyraArtfight2024/ArtfightSoap.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 6JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Furryee</p>
+
+    <img src="MyraArtfight2024/ArtfightFurryee.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 7JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Soarfloh</p>
+
+    <img src="MyraArtfight2024/ArtfightSyloh1.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 7JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Soarfloh</p>
+
+    <img src="MyraArtfight2024/ArtfightSyloh2.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 7JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">MyraPet - by Soarfloh</p>
+
+    <img src="MyraArtfight2024/MyraPet.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 7JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Shimiviolet</p>
+
+    <img src="MyraArtfight2024/ArtfightShimiviolet.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 8JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Hoshi_Star</p>
+
+    <img src="MyraArtfight2024/ArtfightHoshi.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 9JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by eucalipt</p>
+
+    <img src="MyraArtfight2024/ArtfightMassAttack.gif" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 13JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by 10nova_</p>
+
+    <img src="MyraArtfight2024/ArtfightNebula.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 17JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by KBDraws92</p>
+
+    <img src="MyraArtfight2024/ArtfightKBDraws.webp" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 17JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by BallisticFunk</p>
+
+    <img src="MyraArtfight2024/ArtfightGrand.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 18JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Soarfloh</p>
+
+    <img src="MyraArtfight2024/ArtfightSyloh3.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 19JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by PinpinNeon</p>
+
+    <img src="MyraFullArt/ArtTradePinpin.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 22JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">Myra Lay - by Soarfloh</p>
+
+    <img src="MyraArtfight2024/ArtfightSyloh4.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 23JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraArtfight2024/ArtfightZanexus2.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 27JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraFullArt/Myrapixel.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 27JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Cototo81</p>
+
+    <img src="MyraArtfight2024/ArtfightCototo.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 28JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Myra, Chi and Ushi - by Zanexus</p>
+
+    <img src="MyraFullArt/UshiChiMyra.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 29JUL2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by Tholars</p>
+
+    <img src="MyraArtfight2024/ArtfightTholars.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 2AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Artfight 2024
+    </a>
+
+    <p style="color:#bd4789;">by MyraDoesStuff</p>
+
+    <img src="MyraArtfight2024/ArtfightMyraDoesStuff.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 3AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraMelon - by Zanexus</p>
+
+    <img src="MyraEmotes/MyraMelon.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 6AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art Pins
+    </a>
+
+    <p style="color:#bd4789;">by Soarfloh</p>
+
+    <img src="MyraFullArt/ArtTradeSyloh.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 7AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra Painting - by Zanexus</p>
+
+    <img src="MyraFullArt/MyraPainted.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 8AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">Myra eating art - by Zanexus</p>
+
+    <img src="MyraMemes/MyraEatingArt.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 9AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraBewildered - by Furryee</p>
+
+    <img src="MyraEmotes/MyraBewildered.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 15AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">Myarr Harra - by Zari</p>
+
+    <img src="MyraEmotes/myrate.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 17AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">Furryee hug Myra - by Furryee</p>
+
+    <img src="MyraEmotes/MyraMochaHug.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 18AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraPout - by Tholars</p>
+
+    <img src="MyraEmotes/MyraPout.jpg" class="Emotes">
+    <img src="MyraEmotes/MyraPout.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 19AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">Myra Smiler - by Zanexus</p>
+
+    <img src="MyraMemes/MyraSmiler.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 20AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra sleeping - by Zanexus</p>
+
+    <img src="MyraFullArt/MyraSleeping.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 26AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraBleh - by Furryee</p>
+
+    <img src="MyraEmotes/MyraBlehh.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 28AUG2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraMoney - by Pastel</p>
+
+    <img src="MyraEmotes/myramoney.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 1SEP2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraLick - by Furryee</p>
+
+    <img src="MyraEmotes/MyraLick.gif" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 6SEP2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraTearful - by Halfslug</p>
+
+    <img src="MyraEmotes/MyraTearful.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 20SEP2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Memes
+    </a>
+
+    <p style="color:#bd4789;">Myra eye poke - by Furryee</p>
+
+    <video width="320" height="240" class="FullArt" controls>
+      <source src="MyraMemes/MyraEyePoke.mp4" type="video/mp4">
+    </video>
+
+    <p style="color:#bd4789;"><sup>uploaded 22SEP2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraCheeky - by Soarfloh</p>
+
+    <img src="MyraEmotes/MyraCheeky.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 25SEP2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">Hawk cuddle Myra - by Catle</p>
+
+    <img src="MyraEmotes/HawkCuddleMyra.gif" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 29SEP2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraPleas - by Soarfloh</p>
+
+    <img src="MyraEmotes/MyraPleas.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 30SEP2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSquish - by Zacky</p>
+
+    <img src="MyraEmotes/SquishMyra.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 30SEP2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraSmide - by Soarfloh</p>
+
+    <img src="MyraEmotes/MyraSmide.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 3OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraOwO - by Soarfloh</p>
+
+    <img src="MyraEmotes/MyraOwO.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 3OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraBlowKiss - by Soarfloh</p>
+
+    <img src="MyraEmotes/MyraBlowKiss.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 3OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraHappyStare - by Soarfloh</p>
+
+    <img src="MyraEmotes/MyraHappyStare.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 3OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra Yawn - by Zanexus</p>
+
+    <img src="MyraFullArt/MyraYawn.jpg" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 5OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraAngry - by Zari</p>
+
+    <img src="MyraEmotes/MyraAngry.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 10OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraMenace - by Zari</p>
+
+    <img src="MyraEmotes/MyraMenace.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 10OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Sketches
+    </a>
+
+    <p style="color:#bd4789;">Myra in fancy clothes - by Zari</p>
+
+    <img src="MyraSketches/MyraPretty.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 11OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraWave - by Maori</p>
+
+    <img src="MyraEmotes/MyraWave.gif" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 12OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Chi holds Myra - by Zanexus</p>
+
+    <img src="MyraFullArt/ChiHoldMyra.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 18OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">Myra eats chocolate - by Zanexus</p>
+
+    <img src="MyraFullArt/MyraChocolate.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 19OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraBlush - by Furryee</p>
+
+    <img src="MyraEmotes/MyraBlush.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 23OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraComfy - by Furryee</p>
+
+    <img src="MyraEmotes/MyraComfy.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 24OCT2024</sup></p>
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraPleader - by Pastel</p>
+
+    <img src="MyraEmotes/MyraPleader.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 27OCT2024</sup></p> <!--Δ2.666-->
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+  
+    <p style="color:#bd4789;">MyraFlirt - by Pastel</p>
+
+    <img src="MyraEmotes/MyraFlirt.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 28OCT2024</sup></p> <!--Δ2.667-->
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+  
+    <p style="color:#bd4789;">MyraSign - by Furryee</p>
+
+    <img src="MyraEmotes/MyraSign.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 30OCT2024</sup></p> <!--Δ2.669-->
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+  
+    <p style="color:#bd4789;">MyraAdore - by Pastel</p>
+
+    <img src="MyraEmotes/MyraAdore.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 30OCT2024</sup></p> <!--Δ2.669-->
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraWant - by Furryee</p>
+
+    <img src="MyraEmotes/MyraWant.gif" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 5NOV2024</sup></p> <!--Δ2.675-->
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraPearl - by Furryee</p>
+
+    <img src="MyraEmotes/MyraPearl.png" class="Emotes">
+
+    <img src="MyraEmotes/MyraPearlAlt.png" class="Emotes">
+
+    <img src="MyraEmotes/MyraPearlCookie.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 5NOV2024</sup></p> <!--Δ2.675-->
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">MyraThumbsUp - by Furryee</p>
+
+    <img src="MyraEmotes/MyraThumbsUp.png" class="Emotes">
+
+    <img src="MyraEmotes/MyraHand.png" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded 5NOV2024</sup></p> <!--Δ2.675-->
+  </li>
+  <li>
+    <a href="#" style="color:#604065;">
+      Full Art
+    </a>
+
+    <p style="color:#bd4789;">by Zanexus</p>
+
+    <img src="MyraFullArt/MyraHappy.png" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded 6NOV2024</sup></p>
+  </li>
+</ul>
+<!---------------[New Element Template - Full Art]--------------
+  <li>
+    <a href="#" style="color:#604065;">
+      FullArt
+    </a>
+
+    <p style="color:#bd4789;">INSERT_TITLE_HERE</p>
+
+    <img src="" class="FullArt">
+
+    <p style="color:#bd4789;"><sup>uploaded INSERT_DATE_HERE</sup></p>
+  </li>
+---------------------------------------------------->
+
+
+<!---------------[New Element Template - Emotes]--------------
+  <li>
+    <a href="#" style="color:#604065;">
+      Emotes
+    </a>
+
+    <p style="color:#bd4789;">INSERT_TITLE_HERE</p>
+
+    <img src="MyraEmotes/" class="Emotes">
+
+    <p style="color:#bd4789;"><sup>uploaded INSERT_DATE_HERE</sup></p>
+  </li>
+---------------------------------------------------->
+
+
+<!---------------[New Element Template - Base]--------------
+  <li>
+    <a href="#" style="color:#604065;">
+      INSERT_FILTER_TAGS_HERE
+    </a>
+
+    <p style="color:#bd4789;">INSERT_TITLE_HERE</p>
+
+    <img src="" class="INSERT_CLASS_HERE">
+
+    <p style="color:#bd4789;"><sup>uploaded INSERT_DATE_HERE</sup></p>
+  </li>
+---------------------------------------------------->
+
+
+<!---------------[Image classes]--------------
+Emotes
+FullArt
+--------------------------------------------->
+    </body>
+</html>
+
